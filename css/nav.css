@@ -1,0 +1,21 @@
+.layui-logo{
+	font-size: 18px;
+}
+.layui-nav-item a{
+	font-size: 16px;
+}
+.fieldset{
+	margin-top: 20px;
+}
+.main{
+	padding: 15px;
+	height: 100%;
+	background-color: #F2F2F2;
+}
+.layui-card-header a{
+	color: #1E9FFF;
+	font-size: 17px;
+}
+.layui-card-body{
+	cursor: pointer;
+}

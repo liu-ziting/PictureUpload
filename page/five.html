@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<style>
+			img{
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+			}
+			button{
+				margin: 0 auto;
+				margin-top: 20px;
+				width: 350px;
+				background-color: #DE2F32;
+				display: block;
+				border: none;
+				height: 50px;
+				color: #FFFFFF;
+				font-size: 18px;
+				border-radius: 2px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<img src="../img/five/f22.jpg" />
+			<button id="start">随机生成一个福字</button>
+		</section>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../layui/lay/modules/upload.js" ></script>
+		<script type="text/javascript" src="../layui/jquery-3.2.1.min.js" ></script>
+		<script>
+			//随机生成一个随机数
+			var htmlobj, index, arrList, int
+			
+			function arrindex() {
+				htmlobj = $.ajax({
+					url: "../json/fu.json",
+					async: false
+				});
+				arrList = htmlobj.responseJSON.imgList
+				index = Math.floor((Math.random() * arrList.length));
+				var url = arrList[index].url;
+				$("img").attr("src",url);
+			};
+			
+			var number = 0;
+			layui.use('layer', function() {
+				var layer = layui.layer;
+				$("#start").click(function() {
+					var _this = $("#start").text();
+					if(_this == "随机生成一个福字") {
+						number++
+						$("#start").text("好，就这个了！");
+						int = setInterval("arrindex()", "80");
+					} else {
+						$("#start").text("随机生成一个福字");
+						window.clearInterval(int);
+					}
+				});
+			});
+
+		</script>
+	</body>
+</html>

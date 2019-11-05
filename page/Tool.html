@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=7,IE=8,IE=9,IE=10" />
+		<meta name="keywords" content="彼岸天图传,图片上传,上传图片,图片上传网站,上传图片,图片上传,怎么上传图片到百度,图片上传网站,淘宝上传图片">
+		<meta name="description" content="彼岸天图传,图片上传,上传图片,图片上传网站,上传图片,图片上传,怎么上传图片到百度,图片上传网站,淘宝上传图片">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="utf-8" />
+		<title>工具集合</title>
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+	</head>
+
+	<body>
+		<header>
+			<ul class="layui-nav">
+				<li class="logo" >
+					<a href="../index.html">花開彼岸天</a>
+				</li>
+				<li class="layui-nav-item" >
+					<a href="../index.html">图传工具</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="QRCode.html">二维码生成</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="Color.html">配色表</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="Translate.html">翻译</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="About.html">关于我们</a>
+				</li>
+				<li class="layui-nav-item">
+			    	<a href="javascript:;">更多工具</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="Map.html">百度地图</a></dd>
+			      		<dd><a href="HtmlJs.html">HTML转换</a></dd>
+			      		<dd><a href="Tool.html">工具集合</a></dd>
+			    		<dd><a href="Video.html">视频解析</a></dd>
+			    		<dd><a target="view_window" href="https://cssfx.dev/">css小特效</a></dd>
+			    	</dl>
+				</li>
+				<li class="layui-nav-item layuiRight">
+					<a href="Journal.html">更新日志</a>
+				</li>
+			</ul>
+		</header>
+		<div class="main">
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+			  <legend>工具集合</legend>
+			</fieldset>
+			
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+			  <ul class="layui-tab-title">
+			    <li class="layui-this">阴影生成器</li>
+			    <li>三角形生成器</li>
+			    <li>圆角生成器</li>
+			  </ul>
+			  <div class="layui-tab-content">
+			    <div class="layui-tab-item layui-show">
+			    	<section class="triangle">
+						<div class="left">
+							<form class="layui-form" action="">
+								<div class="layui-form-item">
+							     <label class="layui-form-label">水平位移</label>
+							      <div class="layui-input-block">
+							       <div id="slideTest1" class="demo-slider"></div>
+							      </div>
+							    </div>
+							    <div class="layui-form-item">
+							     <label class="layui-form-label">垂直位移</label>
+							      <div class="layui-input-block">
+							       <div id="slideTest2" class="demo-slider"></div>
+							      </div>
+							    </div>
+							    <div class="layui-form-item">
+							     <label class="layui-form-label">模糊半径</label>
+							      <div class="layui-input-block">
+							       <div id="slideTest3" class="demo-slider"></div>
+							      </div>
+							    </div>
+							    <div class="layui-form-item">
+							     <label class="layui-form-label">圆角半径</label>
+							      <div class="layui-input-block">
+							       <div id="slideTest4" class="demo-slider"></div>
+							      </div>
+							    </div>
+							    <div class="layui-form-item">
+							     <label class="layui-form-label">阴影尺寸</label>
+							      <div class="layui-input-block">
+							       <div id="slideTest5" class="demo-slider"></div>
+							      </div>
+							    </div>
+							    <div class="layui-form-item">
+							     <label class="layui-form-label">内外阴影</label>
+							      <div class="layui-input-block">
+							        <div class="radioList">
+							        <input type="radio" lay-filter="yyradio" name="yyradio" value="" title="外" checked="">
+		      						<input type="radio" lay-filter="yyradio" name="yyradio" value="inset" title="内">
+							      	</div>
+							      	<div id="color" ></div>
+							      </div>
+							    </div>
+							</form>
+						</div>
+						<div class="content">
+							<div class="rightBox">
+								<div id="triangle"></div>
+							</div>
+						</div>
+						<div class="right">
+							<pre id="pre" class="layui-code"></pre>
+						</div>
+						<input id="sp" type="hidden" value="5" />
+						<input id="wy" type="hidden" value="5" />
+						<input id="bj" type="hidden" value="5" />
+						<input id="yj" type="hidden" value="0" />
+						<input id="dx" type="hidden" value="0" />
+						<input id="nw" type="hidden" value="" />
+						<input id="ys" type="hidden" value="#666666" />
+						<div class="clear"></div>
+					</section>
+			    </div>
+			    <div class="layui-tab-item">敬请期待</div>
+			    <div class="layui-tab-item">敬请期待</div>
+			  </div>
+			</div> 
+ 
+			<div class="clear"></div>
+		</div>
+		<footer>
+			<p>Copyright Ⓒ 2018 Cat
+				<a href="http://www.lihail.cn">www.lihail.cn</a> All rights reserved. 请勿上传违反中国大陆和香港法律的图片，违者后果自负。</p>
+		</footer>
+		<script type="text/javascript" src="../layui/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../imageHost/js/tool.js" ></script>
+		<script>
+
+		</script>
+	</body>
+
+</html>

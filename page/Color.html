@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=7,IE=8,IE=9,IE=10" />
+		<meta name="keywords" content="彼岸天图传,图片上传,上传图片,图片上传网站,上传图片,图片上传,怎么上传图片到百度,图片上传网站,淘宝上传图片">
+		<meta name="description" content="彼岸天图传,图片上传,上传图片,图片上传网站,上传图片,图片上传,怎么上传图片到百度,图片上传网站,淘宝上传图片">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="utf-8" />
+		<title>配色表</title>
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+	</head>
+
+	<body>
+		<header>
+			<ul class="layui-nav">
+				<li class="logo" >
+					<a href="../index.html">花開彼岸天</a>
+				</li>
+				<li class="layui-nav-item" >
+					<a href="../index.html">图传工具</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="QRCode.html">二维码生成</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="Color.html">配色表</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="Translate.html">翻译</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="About.html">关于我们</a>
+				</li>
+				<li class="layui-nav-item">
+			    	<a href="javascript:;">更多工具</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="Map.html">百度地图</a></dd>
+			      		<dd><a href="HtmlJs.html">HTML转换</a></dd>
+			      		<dd><a href="Tool.html">工具集合</a></dd>
+			    		<dd><a href="Video.html">视频解析</a></dd>
+			    		<dd><a target="view_window" href="https://cssfx.dev/">css小特效</a></dd>
+			    	</dl>
+				</li>
+				<li class="layui-nav-item layuiRight">
+					<a href="Journal.html">更新日志</a>
+				</li>
+			</ul>
+		</header>
+		<div class="main">
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+			  <legend>常用网页配色</legend>
+			</fieldset>
+			<div class="colorTop" style="margin-left: 6px;">
+			  <form class="layui-form" action="">
+			    <div class="layui-form-item">
+			      <div class="layui-input-inline" style="width: 120px;">
+			        <input type="text" value="" placeholder="请选择颜色" class="layui-input" id="test-form-input">
+			      </div>
+			      <button type="button" onclick="window.open('https://gradientlab.space/','_blank');" class="layui-btn gradation">渐变色</button>
+			      <div class="layui-inline" style="left: -11px;float: left;">
+			        <div id="test-form"></div>
+			      </div>
+			    </div>
+			    
+			  </form>
+			</div>			
+			<div class="colorBox">
+				<ul>
+					<li class="color0">#009688</li>
+					<li class="color1">#5FB878</li>
+					<li class="color2">#393D49</li>
+					<li class="color3">#1E9FFF</li>
+					<li class="color4">#FFB800</li>
+					<li class="color5">#FF5722</li>
+					<li class="color6">#01AAED</li>
+					<li class="color7">#2F4056</li>
+					<li class="color8">#FF6666</li>
+					<li class="color9">#333333</li>
+					<li class="color10">#336666</li>
+					<li class="color11">#0099CC</li>
+					<li class="color12">#FF9900</li>
+					<li class="color13">#339966</li>
+					<li class="color14">#66CCCC</li>
+					<li class="color15">#669999</li>
+					<li class="color16">#FF0000</li>
+					<li class="color17">#99CCCC</li>
+					<li class="color18">#CC0033</li>
+					<li class="color19">#FF6600</li>
+					<li class="color20">#FF9900</li>
+					<li class="color21">#666666</li>
+					<li class="color22">#FF9933</li>
+					<li class="color23">#000000</li>
+					<li class="color24">#CCCCCC</li>
+					<li class="color25">#99CC99</li>
+					<li class="color26">#6699CC</li>
+					<li class="color27">#CC6600</li>
+					<li class="color28">#dddddd</li>
+					<li class="color29">#ABCDEF</li>
+					<textarea id="contents" style="height:0;width:0;opacity: 0;"></textarea>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<footer>
+			<p>Copyright Ⓒ 2018 Cat
+				<a href="http://www.lihail.cn">www.lihail.cn</a> All rights reserved. 请勿上传违反中国大陆和香港法律的图片，违者后果自负。</p>
+		</footer>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../layui/lay/modules/upload.js" ></script>
+		<script type="text/javascript" src="../layui/jquery-3.2.1.min.js" ></script>
+		<script>
+			layui.use('element', function(){
+			  var element = layui.element; 
+			});
+			//点击复制到剪切板
+			$(".colorBox ul li").click(function(){
+				var _this = $(this);
+				copyText(_this);
+			})
+			function copyText(_this){ 
+			    var e=document.getElementById("contents");//获取textarea的id
+				e.value = $(_this).text();//把标签的文本内容赋值给textarea
+			    e.select(); //选择textarea的文本内容
+			    document.execCommand("Copy"); //执行浏览器复制命令
+			    layer.tips('复制成功', _this, {tips: 3});
+			}
+			
+			layui.use('colorpicker', function(){
+			  var $ = layui.$
+			  ,colorpicker = layui.colorpicker;
+			  //表单赋值
+			  colorpicker.render({
+			    elem: '#test-form'
+			    ,color: '#1c97f5'
+			    ,done: function(color){
+			      $('#test-form-input').val(color);
+			      $("header").css("background-color",color);
+			      $(".layui-nav").css("background-color",color);
+			    }
+			  });
+			});
+		</script>
+	</body>
+
+</html>

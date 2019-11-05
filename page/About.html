@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=7,IE=8,IE=9,IE=10" />
+		<meta name="keywords" content="彼岸天图传,图片上传,上传图片,图片上传网站,上传图片,图片上传,怎么上传图片到百度,图片上传网站,淘宝上传图片">
+		<meta name="description" content="彼岸天图传,图片上传,上传图片,图片上传网站,上传图片,图片上传,怎么上传图片到百度,图片上传网站,淘宝上传图片">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta charset="utf-8" />
+		<title>关于我们</title>
+		<link rel="stylesheet" href="../layui/css/layui.css" />
+		<link rel="stylesheet" href="../css/main.css" />
+		<style>
+			section a{
+				color: #009688 !important;
+			}
+			section a:hover{
+				color: #FF5722 !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<ul class="layui-nav">
+				<li class="logo" >
+					<a href="../index.html">花開彼岸天</a>
+				</li>
+				<li class="layui-nav-item" >
+					<a href="../index.html">图传工具</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="QRCode.html">二维码生成</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="Color.html">配色表</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="Translate.html">翻译</a>
+				</li>
+				<li class="layui-nav-item">
+					<a href="About.html">关于我们</a>
+				</li>
+				<li class="layui-nav-item">
+			    	<a href="javascript:;">更多工具</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="Map.html">百度地图</a></dd>
+			      		<dd><a href="HtmlJs.html">HTML转换</a></dd>
+			      		<dd><a href="Tool.html">工具集合</a></dd>
+			    		<dd><a href="Video.html">视频解析</a></dd>
+			    		<dd><a target="view_window" href="https://cssfx.dev/">css小特效</a></dd>
+			    	</dl>
+				</li>
+				<li class="layui-nav-item layuiRight">
+					<a href="Journal.html">更新日志</a>
+				</li>
+			</ul>
+		</header>
+		<div class="main">
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+			  <legend>关于我们</legend>
+			</fieldset>
+			<section>
+				<p>彼岸天图传工具，基于腾讯云开发者平台, 本网站由 Coding Pages 提供服务，</p>
+				<p>搭建于Cloud Studio，页面采用Layui，图片存储采用于七牛云存储。</p>
+				<p>如果觉得对你有帮助，可以进行<span id="ds"> 打赏 </span>！！！</p>
+				<p>友链申请或者有问题可以进行<a target="view_window" href="http://www.lihail.cn/post/bi-an-tian-tu-chuan">留言</a>，更多工具持续更新中...</p>
+				<p>严禁上传及分享含有色情、暴力、宣扬恐怖主义的和其他违反中华人民共和国法律的图片</p>
+				<div class="clear"></div>
+				<hr class="layui-bg-green">
+				<p>友情链接：
+					<a target="view_window" href="https://www.layui.com/">Layui</a>，
+					<a target="view_window" href="https://dev.tencent.com/">Cloud Studio</a>，
+					<a target="view_window"  href="https://www.qiniu.com/">七牛云存储</a>，
+					<a target="view_window" href="http://ailongmiao.com/">龙喵网</a>，
+					<a target="view_window" href="https://blog.ouxiaopi.com/">小P君</a>
+				</p>
+			</section>
+			<div class="clear"></div>
+		</div>
+		<div class="layer_notice">
+			<img src="../img/zf.jpg" />
+		</div>
+		<footer>
+			<p>Copyright Ⓒ 2018 Cat
+				<a href="http://www.lihail.cn">www.lihail.cn</a> All rights reserved. 请勿上传违反中国大陆和香港法律的图片，违者后果自负。</p>
+		</footer>
+		<script type="text/javascript" src="../layui/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="../layui/layui.js"></script>
+		<script type="text/javascript" src="../layui/lay/modules/upload.js" ></script>
+		<script>
+			layui.use('element', function(){
+			  var element = layui.element; 
+			});
+			$("#ds").click(function(){
+				layui.use('layer', function() {
+					var $ = layui.jquery,
+					layer = layui.layer;
+					layer.open({
+					  type: 1,
+					  shade: false,
+					  title: false, //不显示标题
+					  content: $('.layer_notice'), //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+					  cancel: function(){
+					   
+					  }
+					});
+				})
+			})
+			layui.use('util', function(){
+			  var util = layui.util;
+			  util.fixbar({
+			    bar1: true,
+    			bar2: "<i style='font-size: 26px;' class='layui-icon layui-icon-website'></i>",
+			    css: {right: 50, bottom: 70},
+    			bgcolor: '#393D49',
+    			click: function(type){
+			      console.log(type);
+			      if(type === 'bar1'){
+			      	window.open("http://wpa.qq.com/msgrd?v=3&uin=1440193482&site=qq&menu=yes")
+			      }else if(type === 'bar2'){
+			      	window.open("http://www.lihail.cn")
+			      }
+			    }
+			  });
+			});
+		</script>
+	</body>
+
+</html>
